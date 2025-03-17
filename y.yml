@@ -1,0 +1,14 @@
+---
+- name: Install Docker the easy way
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Install Docker using convenience script
+      shell: curl -fsSL https://get.docker.com | sh
+
+    - name: Start and enable Docker
+      service:
+        name: docker
+        state: started
+        enabled: true
+

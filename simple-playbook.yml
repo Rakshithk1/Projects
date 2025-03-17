@@ -1,0 +1,10 @@
+- name: Simple Test Playbook
+  hosts: localhost
+  become: true
+  connection: local
+  tasks:
+    - name: Create a test file
+      copy:
+        content: "Hello, Ansible is working!"
+        dest: /tmp/ansible-test.txt
+
