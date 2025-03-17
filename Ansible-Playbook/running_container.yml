@@ -1,3 +1,4 @@
+---
 - name: Run Nginx container with Docker
   hosts: localhost
   become: true
