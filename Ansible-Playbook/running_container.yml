@@ -13,4 +13,5 @@
         restart_policy: always
         published_ports:
           - "80:80"
-
+  volumes:
+    - /home/ec2-user/website:/usr/share/nginx/html:ro
