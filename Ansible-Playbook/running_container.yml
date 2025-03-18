@@ -14,4 +14,4 @@
         published_ports:
           - "80:80"
   volumes:
-    - /home/ec2-user/website:/usr/share/nginx/html:ro
+    - /root/C-A/website:/usr/share/nginx/html:ro
