@@ -3,6 +3,8 @@
   hosts: localhost
   become: true
   connection: local
+  collections:
+    - community.docker
 
   tasks:
     - name: Ensure Nginx container is running
@@ -13,5 +15,5 @@
         restart_policy: always
         published_ports:
           - "80:80"
-  volumes:
-    - /root/C-A/website:/usr/share/nginx/html:ro
+        volumes:
+          - /root/C-A/website:/usr/share/nginx/html:ro
