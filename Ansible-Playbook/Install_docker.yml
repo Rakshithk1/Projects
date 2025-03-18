@@ -3,8 +3,14 @@
   hosts: localhost
   become: true
   tasks:
-    - name: Install Docker using convenience script
-      shell: curl -fsSL https://get.docker.com | sh
+
+  - name: Install Docker from amazon-linux-extras
+    shell: |
+     amazon-linux-extras enable docker
+     yum clean metadata
+     yum install -y docker
+#- name: Install Docker using convenience script
+#  shell: curl -fsSL https://get.docker.com | sh
 
     - name: Start and enable Docker
       service:
