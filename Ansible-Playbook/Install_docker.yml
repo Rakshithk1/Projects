@@ -13,7 +13,7 @@
 #  shell: curl -fsSL https://get.docker.com | sh
 
     - name: Start and enable Docker
-      service:
+      systemd:
         name: docker
         state: started
         enabled: true
