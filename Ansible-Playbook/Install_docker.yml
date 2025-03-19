@@ -1,6 +1,6 @@
 ---
 - name: Install Docker the easy way
-  hosts: localhost
+  hosts: client
   become: true
   tasks:
 
