@@ -6,5 +6,5 @@
     - name: Copy index.html to client server
       copy:
         src: /var/lib/jenkins/workspace/website-deploy/Ansible-Playbook/
-        dest: /root/C-A/website/
+        dest: /root/C-A/website
 
