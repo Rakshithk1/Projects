@@ -3,8 +3,7 @@
   hosts: client
   become: yes
   tasks:
-    - name: Copy index.html to client server
+    - name: Copy index.html from Jenkins workspace to client container volume
       copy:
-        src: /var/lib/jenkins/workspace/website-deploy/Ansible-Playbook/
-        dest: /root/C-A/website
-
+        src: /var/lib/jenkins/workspace/website-deploy/Ansible-Playbook/index.html
+        dest: /root/C-A/website/index.html
