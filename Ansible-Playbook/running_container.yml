@@ -1,8 +1,7 @@
 ---
 - name: Run Nginx container with Docker
-  hosts: localhost
+  hosts: all
   become: true
-  connection: local
   collections:
     - community.docker
 
