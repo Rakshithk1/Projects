@@ -6,5 +6,5 @@
     - name: Copy index.html to client server
       copy:
         src: index.html
-        dest: /root/C-A/website/index.html
+        dest: /root/C-A/website/
 
