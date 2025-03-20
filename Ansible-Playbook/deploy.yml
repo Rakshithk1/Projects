@@ -1,6 +1,6 @@
 ---
 - name: Deploy Website File
-  hosts: client
+  hosts: all
   become: yes
   tasks:
     - name: Copy index.html to client server
