@@ -1,3 +1,4 @@
-[client]
-16.171.144.181 ansible_user=root ansible_ssh_private_key_file=/tmp/jan16.pem
+#[client]
+16.171.144.181
+#ansible_user=root ansible_ssh_private_key_file=/tmp/jan16.pem
 
