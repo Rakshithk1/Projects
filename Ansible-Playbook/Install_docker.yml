@@ -1,15 +1,15 @@
 ---
-- name: Install Docker the easy way
+- name: Install Docker
   hosts: client
   become: true
   tasks:
 
-  - name: Install Docker from amazon-linux-extras
+  - name: Install Docker
     shell: |
      amazon-linux-extras enable docker
      yum clean metadata
      yum install -y docker
-#- name: Install Docker using convenience script
+#- name: Install Docker 
 #  shell: curl -fsSL https://get.docker.com | sh
 
     - name: Start and enable Docker
