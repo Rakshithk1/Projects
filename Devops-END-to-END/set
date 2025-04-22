@@ -1,0 +1,28 @@
+### first you will need to install the jenkins in the master server.
+
+
+sudo yum update -y
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+sudo yum upgrade
+sudo yum install fontconfig java-17-openjdk -y
+sudo yum install jenkins -y
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+
+
+Allow the port 8080 and login using the given details.
+
+Create the job>>free style prject.
+
+here we are pulling the code from the github for the execution of the terraform code. 
+
+execute this in the shell step:
+
+cd Projects/Devops-END-to-END/terraform_files/
+terraform init
+terraform apply -auto-approve
+
+
+Run the job or we can set up webhook for the automatic run.
+

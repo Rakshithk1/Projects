@@ -1,0 +1,18 @@
+### this is to install and run the httpd from the master to worker.
+
+---
+- name: Set up Apache on EC2
+  hosts: dev_servers
+  become: yes
+  tasks:
+    - name: Install Apache
+      yum:
+        name: httpd
+        state: present
+
+    - name: Start Apache service
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+

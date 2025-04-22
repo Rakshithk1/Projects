@@ -1,0 +1,17 @@
+### steps to install promethuis.
+
+https://prometheus.io/
+click on down and copy the prometheus for linyx
+Go to CLI and enter wget <the link you copied>
+once done, extract the tar file using tar -xvf 
+Go inside it and edit the promatheos yaml file and enter the worker node details.
+
+
+
+Do the same in the worker node, but but the file is node exporter.
+
+
+execute the shell and make sure to enable the port on master 9090 and in worker 9100
+
+Open the dashbord using ip and the port.
+Make sure it is UP in the target.
